@@ -1,0 +1,17 @@
+1{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+    <div>
+        <h1 class="text-center text-info">paying for {{ product.name }}</h1>
+        <form style="width:40%; margin: auto;"  method="post" action="it" class="update-form">
+            <P>{{ success }}</P>
+            {% csrf_token %}
+            <input value="{{ product.price }}" required readonly class="form-control"  name="p-price">
+            <input required class="form-control" placeholder="phone number" name="c-phone" type="text"><br>
+            <input class="btn btn-info" value="pay" type="submit">
+
+        </form>
+    </div>
+{% qendblock %}
+=\!1
+!
