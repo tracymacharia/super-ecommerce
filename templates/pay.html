@@ -1,9 +1,9 @@
-1{% extends 'master.html' %}
+{% extends 'master.html' %}
 {% load static %}
 {% block content %}
     <div>
         <h1 class="text-center text-info">paying for {{ product.name }}</h1>
-        <form style="width:40%; margin: auto;"  method="post" action="it" class="update-form">
+        <form style="width:40%; margin: auto;"  method="post" action="" class="update-form">
             <P>{{ success }}</P>
             {% csrf_token %}
             <input value="{{ product.price }}" required readonly class="form-control"  name="p-price">
@@ -12,4 +12,4 @@
 
         </form>
     </div>
-{% qendblock %}
+{% endblock %}
